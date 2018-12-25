@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+      <center>
+      	<h1 class="display-3">{{title}}</h1>
+		<p>{{content}}</p>
+		<hr>
+		<h2 class="display-4"> Outsource</h2>
+		<div class="input-group">
+		  <div class="input-group-prepend">
+		    <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+		  </div>
+		  <div class="custom-file">
+		    <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01" multiple>
+		    <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+		  </div>
+		</div>
+		<div>
+			<br>
+			<button type="button" id="filesubmit" class="btn btn-success btn-lg">Submit file</button>
+		</div>
+		<hr>
+		<h2 class="display-4"> Retrieve</h2>
+		<a href="/files">Retrieve files</a>
+		</center>
+  		{{#if files}}
+  			<br>
+  			{{#each files}}
+    			<li><a href="" onclick="retrive('{{this}}'); return false;">{{this}}</a></li>
+  			{{/each}}
+  		{{/if}}
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+</div>
+
